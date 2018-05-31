@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day07_08practice1</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		/*
+		*使用float
+		*/
+		/*.bd {
+			overflow: hidden;
+		}
+		.left {
+			float: left;
+			width: 30%;
+			height: 636px;
+			background-color: skyblue;
+			margin-right: 10px;
+		}
+		.right {
+			width: 100%;
+			height: 636px;
+			margin-left: 31%;
+			background-color: blue;
+		}*/
+		/*
+		*使用position
+		*/
+		.bd {
+			overflow: hidden;
+		}
+		.left {
+			position: absolute;
+			width: 30%;
+			height: 636px;
+			top: 0;
+			left: 0;
+			background-color: skyblue;
+		}
+		.right {
+			position: absolute;
+			width: 70%;
+			height: 636px;
+			top: 0;
+			left: 30%;
+			right: 0;
+			margin-left: 10px;
+			background-color: blue;
+		}
+		/*
+		*使用flexbox
+		*/
+		/*.bd {
+			display: flex;
+		}
+		.left,.right {
+			height: 636px;
+		}
+		.left {
+			width: 30%;
+			background-color: skyblue;
+			margin-right: 10px;
+		}
+		.right {
+			width: 70%;
+			background-color: blue;
+		}*/
+
+	</style>
+</head>
+<body>
+<div class="bd">
+	<div class="left">left</div>
+	<div class="right">right</div>
+</div>
+</body>
+</html>

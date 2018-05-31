@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task_day_07_08</title>
+	<style type="text/css">
+	body,
+	.header,
+	#logo,
+	.header div ul,
+	.headerR,
+	.banner,
+	.four,
+	.banners,
+	.rightPicture,
+	.nav,
+	.nav,
+	.main,
+	.item,
+	.content,
+	.footer {
+		margin: 0;
+	}
+	.header {
+		width: 100%;
+		height: 80px;
+		background-color: #333333;
+	}
+	.header div {
+		width: 960px;
+		margin: 0 auto;
+	}
+	#logo {
+		float: left;
+		font-size: 24px;
+		color: #fff;
+		line-height: 64px;
+	}
+	.headerR a {
+		float: right;
+		margin-left: 10px;
+		color: #fff;
+	}
+	.banner {
+		width: 100%;
+		height: 300px;
+		background-color: #66BB33;
+	}
+	.banners {
+		position: relative;
+		width: 960px;
+		height: 100%;
+		overflow: hidden;
+	}
+	.rightPicture {
+		height: 50px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.rightPicture div {
+		margin-top: 15px;
+		width: 30px;
+		height: 35px;
+		background-color: #B2DD99;
+		margin-left: 10px;
+		float: right;
+		line-height: 35px;
+		text-align: center;
+	}
+	.rightPicture div:hover {
+		margin-top: 0;
+		height: 50px;
+		line-height: 65px;
+		background-color: #E0F1D6;
+	}
+	.nav {
+		width: 100%;
+		height: 70px;
+		border-bottom: 1px solid #CCCCCC;
+	}
+	.navs {
+		width: 960px;
+		height: 50px;
+		margin: 0 auto;
+		position: relative;
+		top: 20px;
+	}
+	.navs a {
+		display: block;
+		float: left;
+		width: 116px;
+		height: 50px;
+		margin: 0;
+		border: 1px solid #DDDDDD;
+		border-radius: 20px 20px 0 0;
+		background-color: #EEEEEE;
+		line-height: 50px;
+		text-align: center;
+		text-decoration: none;
+		color: #000;
+/*		font-family: Helvetica;*/
+	}
+	.navs a:hover {
+		background-color: #fff;
+		border-bottom: 1px solid #fff;
+	}
+	.main {
+		width: 960px;
+		height: 580px;
+		margin: 0 auto;
+	}
+	.item {
+		margin-top: 10px;
+		height: 175px;
+		display: flex;
+	}
+	.content {
+		box-sizing: border-box;
+		width: 100%;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		margin-right: 10px;
+		border: 1px solid #ccc;
+		text-align: center;
+	}
+	.footer {
+		width: 100%;
+		height: 120px;
+		background-color: #666;
+		text-align: center;
+		color: #fff;
+		padding-top: 20px;
+	}
+	</style>
+</head>
+<body>
+<header class="header">
+	<div>
+		<p id="logo">Logo</p>
+		<div class="headerR">
+			<a href="#">Login</a>
+			<a href="#">Register</a>
+			<a href="#">Github</a>
+		</div>
+	</div>
+</header>
+<section class="banner">
+	<div class="banners">
+		<div class="rightPicture">
+			<div class="number">4</div>
+			<div class="numbe">3</div>
+			<div class="numbe">2</div>
+			<div class="numbe">1</div>
+		</div>
+	</div>
+</section>
+<nav class="nav">
+	<div class="navs">
+		<a href="#">HOME</a>
+		<a href="#">PROFILE</a>
+		<a href="#">ABOUT</a>
+	</div>
+</nav>
+<section class="main">
+	<div class="item">
+		<div class="content">This is Content 1</div>
+		<div class="content">MaybeContent 2</div>
+		<div class="content">Content 3</div>
+	</div>
+	<div class="item">
+		<div class="content">Content 4</div>
+		<div class="content">Content 5</div>
+		<div class="content">Content 6</div>
+		<div class="content">Content 7</div>
+	</div>
+	<div class="item">
+		<div class="content">Content 8</div>
+		<div class="content">Content 9</div>
+		<div class="content">Content 10</div>
+	</div>
+</section>
+<footer class="footer">© 2018 ife.baidu.com</footer>
+</body>
+</html>

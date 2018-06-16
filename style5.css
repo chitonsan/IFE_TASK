@@ -1,0 +1,33 @@
+.picture {
+	width: 1600px;
+	height: 1000px;
+	margin: 0;
+	border-top: 1px solid #eaeaea;
+}
+.leaf {
+	float: left;
+	margin: 115px 0 0 315px;
+}
+.learn {
+	width: 310px;
+	height: 240px;
+	margin: 185px 0 0 985px;
+	font-size: 16px;
+	color: #828282;
+}
+.learn b,
+.choose b {
+	color: #000;
+	font-size: 20px;
+}
+.bird {
+	float: right;
+	margin: 115px 315px 0 0;
+}
+.choose {
+	width: 330px;
+	height: 240px;
+	margin: 215px 0 0 315px;
+	font-size: 16px;
+	color: #828282;
+}

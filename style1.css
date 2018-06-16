@@ -1,0 +1,85 @@
+body,
+.head,
+.welcome1,
+.welcome2,
+.login,
+.loading div,
+.login input,
+.welcome3,
+.welcome4 {
+	margin: 0;
+}
+
+.head {
+	width: 1600px;
+	height: 1000px;
+	background: url(../img/header.png) no-repeat;	
+}
+.welcome1 {
+	color: #fff;
+	font-family: Times,Georgia;
+	text-align: center;
+	font-size: 62px;
+	padding-top: 205px;
+}
+.welcome2 {
+	width: 785px;
+	height: 85px;
+	color: #fff;
+	font-family: ;
+	font-size: 20px;
+	margin: 65px auto 0;
+	text-align: center;
+}
+.loading {
+	width: 970px;
+	height: 250px;
+	margin: 95px auto 0;
+	border: 1px solid #5B584B;
+}
+.loading .welcome3 {
+	color: #fff;
+	margin: 55px auto 0;
+	font-size: 16px;
+	text-align: center;
+}
+.loading .welcome4 {
+	color: #5B584B;
+	margin: 15px auto 0;
+	font-size: 12px;
+	text-align: center;
+}
+.login  {
+	width: 770px;
+	height: 50px;
+	margin: 40px 100px 0;
+	box-sizing: border-box;
+	display: flex;
+}
+.login input {
+	width: 290px;
+	height: 50px;
+	border: 1px solid #58584B;
+	margin-right: 30px;
+	background-color: transparent;
+	box-sizing: border-box;
+
+}
+.login :first-child {
+	color: #fff;
+	font-size: 14px;
+	padding-left: 20px;
+}
+.login :nth-child(2) {
+	color: #58584B;
+	font-size: 14px;
+	padding-left: 20px;
+}
+.login :last-child {
+	width: 120px;
+	height: 51px;
+	font-size: 12px;
+	margin-right: 0;
+	background-color: #fff;
+	box-sizing: border-box;
+}

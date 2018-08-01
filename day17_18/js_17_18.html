@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number"  value="0" placeholder="第一个数字">
+    <input id="second-number"  value="0" placeholder="第二个数字">
+    <button id="add-btn" onclick="addFunction()">加</button>
+    <button id="minus-btn" onclick="minusFunction()">减</button>
+    <button id="times-btn" onclick="timesFunction()">乘</button>
+    <button id="divide-btn" onclick="divideFunction()">除</button>
+    <p id="result">运算结果</p>
+    <script>
+    	var ch=/^[0-9]+.?[0-9]*/;
+    	function addFunction(){   		
+    		if (!ch.test(document.getElementById("first-number").value)||!ch.test(document.getElementById("second-number").value)){
+    			console.log("请输入数字");
+    		}
+    		else{	
+    		 var x=Number(document.getElementById("first-number").value) + Number(document.getElementById("second-number").value);
+    		 document.getElementById("result").innerHTML=x;
+    	}
+    	}
+    	
+    	function minusFunction() {
+    		if (!ch.test(document.getElementById("first-number").value)||!ch.test(document.getElementById("second-number").value)){
+    			console.log("请输入数字");
+    		}
+    		else {
+    			var x=Number(document.getElementById("first-number").value) - Number(document.getElementById("second-number").value);
+    		 document.getElementById("result").innerHTML=x;
+    		} 
+    	}
+    	function timesFunction() {
+    		if (!ch.test(document.getElementById("first-number").value)||!ch.test(document.getElementById("second-number").value)){
+    			console.log("请输入数字");
+    		}
+    		else {
+    		 var x=Number(document.getElementById("first-number").value) * Number(document.getElementById("second-number").value);
+    		 document.getElementById("result").innerHTML=x;
+    		}
+    	}
+    	function divideFunction() {
+    		if (!ch.test(document.getElementById("first-number").value)||!ch.test(document.getElementById("second-number").value)){
+    			console.log("请输入数字");
+    		}
+    		else if (Number(document.getElementById("second-number").value)==0) {
+    			console.log("除数不能为0");
+    		}
+    		else {
+    		 var x=Number(document.getElementById("first-number").value) / Number(document.getElementById("second-number").value);
+    		 document.getElementById("result").innerHTML=x;
+    		}
+    	}
+    </script>
+</body>
+</html>

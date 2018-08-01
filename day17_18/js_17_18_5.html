@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>九九乘法表</title>
+</head>
+<body>
+<pre>小练习，练习使用循环实现一个九九乘法表
+
+第一步，最低要求：在Console中按行输出 n * m = t
+然后，尝试在网页中，使用table来实现一个九九乘法表</pre>
+<script>
+	/*第一步
+	*/
+	// function myFunction() {
+	// 	for(var i=1;i<=9;i++) {
+	// 		for(var j=1;j<=i;j++) {
+	// 			console.log(i+'*'+j+'='+i*j);
+	// 		}
+	// 	}
+	// }
+	// myFunction();
+	document.write('<table>');
+	for(var i=1;i<=9;i++) {
+		document.write('<tr>');
+		for(var j=1;j<=i;j++) {
+			document.write('<td>'+i+'*'+j+'='+i*j+'</td>');
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
+	/*根据当前时间输出不同的问候语
+	*/
+	var now=new Date();
+	var hour=now.getHours();
+	if(hour>6&&hour<12) document.write('早上好！');
+	else if(hour>12&&hour<18) document.write('下午好！');
+	else if(hour>18&&hour<23) document.write('晚上好！');
+	else document.write('深夜了！');
+</script>
+</body>
+</html>

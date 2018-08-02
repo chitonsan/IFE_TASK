@@ -35,7 +35,7 @@
 	if(hour>=6&&hour<12) document.write('早上好！');
 	else if(hour>=12&&hour<18) document.write('下午好！');
 	else if(hour>=18&&hour<23) document.write('晚上好！');
-	else document.write('深夜了！');
+	else if(hour>=23||hour<1) document.write('深夜了！');
 </script>
 </body>
 </html>

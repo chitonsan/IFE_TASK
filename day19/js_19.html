@@ -32,7 +32,6 @@ parentNode
             </div>
             <img src="">
             <p id="returnLi">Some Text</p>
-            <button id="btn1">点我</button>
         </div>
         <div id="news-normal" class="section">
             <h3>Some title</h3>
@@ -133,8 +132,7 @@ parentNode
             element.appendChild(para);
 
     }
-    var btn1=document.getElementById("btn1");
-    btn1.onclick=getAllListItem();
+    getAllListItem();
     findAllHtmlSpanInOneSection("news-top");
     findListItem("news-top", "JS");
     getActiveLinkContent("news-top");

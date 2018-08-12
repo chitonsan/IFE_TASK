@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- 在HTML中增加上面的代码，然后通过JavaScript编写如下功能：
+
+当点击按钮 submit-btn 时，在console中输出 name 中的内容
+在输入过程中，如果按回车键，则同样执行上一条的需求
+在输入过程中，如果按 ESC 键，则把输入框中的内容清空 -->
+	<input id="name" type="text">    
+	<button id="submit-btn">Submit</button>
+<script>
+	var x=document.getElementById("name");
+	var btn=document.getElementById("submit-btn");
+	btn.onclick=function() {
+		console.log(x.value);
+	}
+	x.onkeyup=function(e) {
+		if(e.keyCode==13) {
+			console.log(x.value);
+		} else if(e.keyCode==27){
+			x.value="";
+		}
+	}
+</script>
+</body>
+</html>

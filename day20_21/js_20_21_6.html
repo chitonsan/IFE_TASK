@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>笑脸动画</title>
+	<style type="text/css">
+		.smile {
+			background-image: url(http://ife.baidu.com/2016/static/img/erik_ce204002.jpg);
+			width: 480px;
+			height: 480px;
+			margin: 200px auto;
+			/*background-position: 8160px;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="smile" id="smile"></div>
+	<script>
+		var face = document.getElementById("smile");
+		var incStep = 0;
+		function animation() {
+			if (face.style.backgroundPositionY !== "") {				
+				if(parseInt(face.style.backgroundPositionY) >= 0 ){
+					incStep = -480;
+				}
+				else if(parseInt(face.style.backgroundPositionY) <= -7680 ){
+					incStep = 480;
+				}
+				face.style.backgroundPositionY = parseInt(face.style.backgroundPositionY)+incStep+"px";
+			} else {
+				face.style.backgroundPositionY ="-7680px";
+			}
+		}
+		setInterval(animation, 100);
+		// setInterval("\
+		//  	if(face.style['backgroundPositionY']!==''){\
+  //           	face.style['backgroundPositionY'] = parseInt(face.style['backgroundPositionY'])-480+'px'\
+  //       	}else{\
+  //           	face.style['backgroundPositionY']='480px';\
+  //       	}\
+  //   	",100)
+	</script>
+</body>
+</html>

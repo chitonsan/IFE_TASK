@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>栈练习</title>
+</head>
+<body>
+	<input id="stack-input" type="text">
+	<p id="stack-cont">栈内容：apple&lt;-pear</p>    
+	<button id="push-btn">进栈</button>
+	<button id="pop-btn">退栈</button>
+	<button id="font-btn">打印栈顶元素内容</button>
+	<button id="empty-btn">判断栈是否为空</button>
+
+	<script>
+		var stack = ["apple", "pear"],
+			cont = document.getElementById("stack-cont"),
+			input = document.getElementById("stack-input"),
+			buts = document.getElementsByTagName("button");
+		buts[0].onclick = function() {
+			stack.unshift(input.value);
+			var contText = stack.join("<-");
+			cont.innerText = "栈内容：" + contText;
+			input.value = "";
+		}
+		buts[1].onclick = function() {
+			stack.shift();
+			var contText = stack.join("<-");
+			cont.innerText = "栈内容：" + contText;
+			input.value = "";
+		}
+		buts[2].onclick = function() {
+			var contText = stack[0];
+			cont.innerText = "栈顶元素：" + contText;
+		}
+		buts[3].onclick = function() {
+			var contText = stack.join("<-");
+			if (contText === "") {
+				cont.innerText = "栈为空" ;
+			} else {
+				cont.innerText = "栈不为空" ;
+			}
+		}
+	</script>
+</body>
+</html>

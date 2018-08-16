@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>队列练习</title>
+</head>
+<body>
+	<!-- 基于以下代码，实现如按钮中描述的功能：
+
+	实现如阅读材料中，队列的相关入队、出队、获取队头、判空的操作
+	队头对应数组中最后一个元素
+	入队和出队操作后，需要在 id 为 queue-cont 的 p 标签中更新显示队列中的内容，队头在最右侧，中间用 -> 连接（练习使用数组的join方法） -->
+	<input id="queue-input" type="text">
+	<p id="queue-cont">队列内容：apple-&gt;pear</p>    
+	<button id="in-btn">入队</button>
+	<button id="out-btn">出队</button>
+	<button id="font-btn">打印队头元素内容</button>
+	<button id="empty-btn">判断队列是否为空</button>
+
+	<script>
+		var queue = ["apple", "pear"];
+		var buts = document.getElementsByTagName("button"),
+			cont = document.getElementById("queue-cont"),
+			input = document.getElementById("queue-input");
+		buts[0].onclick = function() {
+			queue.unshift(input.value);
+			contText = queue.join("->");
+			cont.innerText = "队列内容：" + contText;
+			input.value = "";
+		}
+		buts[1].onclick = function() {
+			queue.pop();
+			contText = queue.join("->");
+			console.log(queue);
+			cont.innerText = "队列内容：" + contText;
+			input.value = "";
+		}
+		buts[2].onclick = function() {
+			contText = queue[queue.length - 1];
+
+			cont.innerText = "队头元素：" + contText;
+		}
+		buts[3].onclick = function() {
+			contText = queue.join("->");
+			if (contText === "") {
+				cont.innerText = "队列为空";
+			} else {
+				cont.innerText = "队列不为空";
+			}
+		}
+	</script>
+</body>
+</html>

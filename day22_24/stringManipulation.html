@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>字符串处理</title>
+	<style type="text/css">
+		button {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<!-- 基于如下HTML，实现需求
+
+按照HTML中按钮的描述以此实现功能
+计算结果显示在 id 为 result 的 P 标签中 -->
+	<div>
+    <label>String A:
+        <input id="radio-a" type="radio" checked="true" name="str-obj" value="a">
+    </label>
+    <textarea id="str-a"></textarea>
+    <label>String B:
+        <input id="radio-b" type="radio" name="str-obj" value="b">
+    </label>
+    <textarea id="str-b"></textarea>        
+    <label>Num A：<input id="num-a" type="number" value="0"></label>
+    <label>Num B：<input id="num-b" type="number" value="1"></label>
+</div>
+<div>
+    <button>获取当前选中输入的内容长度</button>
+    <button>当前选中输入中的第3个字符</button>
+    <button>把两个输入框的文字连接在一起输出（concat）</button>
+    <button>输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+    <button>输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button>
+    <button>使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+    <button>当前选中输入框的行数</button>
+    <button>使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button>
+    <button>把所选输入框中的内容全部转为大写</button>
+    <button>把所选输入框中的内容全部转为小写</button>
+    <button>把所选输入框中内容的半角空格全部去除</button>
+    <button>把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+</div>
+<p id="result"></p> 
+<script>
+	var stringA = document.getElementById("radio-a"),
+		stringB = document.getElementById("radio-b"),
+		result = document.getElementById("result"),
+		buts = document.getElementsByTagName("button");
+	buts[0].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (stringA.checked && a) {
+			result.innerText = a.length;
+		} else if (stringB.checked && b) {
+			result.innerText = b.length;
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[1].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (stringA.checked && a) {
+			result.innerText = a.charAt(2);
+		} else if (stringB.checked && b) {
+			result.innerText = b.charAt(2);
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[2].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (a && b) {
+			result.innerText = a.concat(b);
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[3].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (a && b) {
+			result.innerText = a.indexOf(b);
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[4].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (a && b) {
+			result.innerText = b.lastIndexOf(a);
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[5].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value,
+			numA = document.getElementById("num-a").value,
+			numB = document.getElementById("num-b").value;
+		if (stringA.checked && a) {
+			result.innerText = a.slice(numA, numB);
+		} else if (stringB.checked && b) {
+			result.innerText = b.slice(numA, numB);
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[6].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;	
+		if (stringA.checked && a) {
+			var	aArr = 	a.split("\n");	//有一个缺陷就是换行之后，未输入内容也会加到总行数里面
+			result.innerText = aArr.length;
+		} else if (stringB.checked && b) {
+			var	bArr = 	b.split("\n");
+			result.innerText = bArr.length;
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[7].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value,
+			numA = document.getElementById("num-a").value,
+			numB = document.getElementById("num-b").value;
+		if (stringA.checked && a) {
+			result.innerText = a.substr(numA, numB);
+		} else if (stringB.checked && b) {
+			result.innerText = b.substr(numA, numB);
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[8].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (stringA.checked && a) {
+			result.innerText = a.toUpperCase();
+		} else if (stringB.checked && b) {
+			result.innerText = b.toUpperCase();
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[9].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (stringA.checked && a) {
+			result.innerText = a.toLowerCase();
+		} else if (stringB.checked && b) {
+			result.innerText = b.toLowerCase();
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[10].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;	
+		if (stringA.checked && a) {
+			var	aArr = 	a.split(" ");
+			result.innerText = aArr.join("");
+		} else if (stringB.checked && b) {
+			var	bArr = 	b.split(" ");
+			result.innerText = bArr.join("");
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+	buts[11].onclick = function() {
+		var a = document.getElementById("str-a").value,
+			b = document.getElementById("str-b").value;
+		if (stringA.checked && a && b) {
+			result.innerText = a.replace("a", b);
+		} else if (stringB.checked && a && b) {
+			result.innerText = b.replace("a", a);
+		} else {
+			console.log("请输入字符！");
+		}
+	}
+</script>
+</body>
+</html>

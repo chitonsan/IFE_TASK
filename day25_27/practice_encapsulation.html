@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>函数封装</title>
+</head>
+<body>
+	<p id="date"></p>
+	<script>
+		function timeNow() {
+				var dateNow = new Date(),
+				p = document.getElementById("date"),
+				h = dateNow.getHours(),
+				m = dateNow.getMinutes(),
+				s = dateNow.getSeconds(),
+				year = dateNow.getFullYear(),
+				month = dateNow.getMonth() + 1,
+				day = dateNow.getDate(),
+				weekDay = week(dateNow),
+				m = complement(m),
+				s = complement(s),
+				time = h + ":" + m + ":" + s;
+				p.innerText = result(year,month,day,weekDay,time) + "\n" + result2(year,month,day,weekDay,time);
+				t = setTimeout(timeNow, 1000);
+		}
+		//补充至两位		
+		function complement(x) {
+			x = x.toString();
+			x = x.padStart(2, "0");
+			return x;
+		}
+		//返回星期几
+		function week(x) {
+			var weekDay = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五"," 星期六"],
+				number = x.getDay();
+				return weekDay[number];
+		}
+		//输出格式
+		function result(year, month, day, weekDay, time) {
+			return year + "年" + month + "月" + day + "日" + weekDay + " " + time;
+		}
+		function result2(year, month, day, weekDay, time, h) {
+			var weekE = {
+				"星期日": "sunday",
+                "星期一": "Monday",
+                "星期二": "Tuesday",
+                "星期三": "Wednesday",
+                "星期四": "Thursday",
+                "星期五": "Friday",
+                "星期五": "Saturday"
+			};
+			if (h < 12) {
+				return year + "-" + month + "-" + day + " " + weekE[weekDay] + " " + time + "AM";
+			} else {
+				return year + "-" + month + "-" + day + " " + weekE[weekDay] + " " + time + "PM";
+			}
+		}
+		timeNow();
+	</script>
+</body>
+</html>
